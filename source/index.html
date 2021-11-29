@@ -10,7 +10,22 @@
 <body class="body">
   <div class="body-wrapper">
 
-    <h1>Добавление товара</h1>
+    <div class="dropdown-wrapper">
+
+      <h1>Добавление товара</h1>
+
+      <div class="dropdown">
+        <input type="checkbox" id="checkbox-toggle">
+        <label for="checkbox-toggle">По умолчанию</label>
+        <ul>
+          <li><a href="#">По убыванию</a></li>
+          <li><a href="#">По желанию</a></li>
+          <li><a href="#">По возрастанию</a></li>
+          <li><a href="#">По настроению</a></li>
+        </ul>
+      </div>
+
+    </div>
 
     <form action="/" method="post" class="load">
 
@@ -35,16 +50,20 @@
     </form>
 
     <section class="product-cards">
-      <div class="dropdown">
-        <input type="checkbox" id="checkbox-toggle">
-        <label for="checkbox-toggle">По умолчанию</label>
-        <ul>
-          <li><a href="#">По убыванию</a></li>
-          <li><a href="#">По желанию</a></li>
-          <li><a href="#">По возрастанию</a></li>
-          <li><a href="#">По настроению</a></li>
-        </ul>
+
+      <div class="product-card">
+        <picture>
+          <img src="./img/Photo-product.jpg" alt="Фотография продукта">
+        </picture>
+        <h2>
+          Наименование товара
+        </h2>
+        <p>
+          Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк
+        </p>
+        <p class="product-card_price">10 000 руб.</p>
       </div>
+
     </section>
   </div>
 
