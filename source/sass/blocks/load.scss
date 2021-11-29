@@ -1,0 +1,126 @@
+.load {
+  background-color: $basic-white;
+  width: 332px;
+  height: 440px;
+  font-size: 10px;
+  line-height: 13px;
+  border-radius: 4px;
+  margin-left: 32px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &_name {
+    color: $special-grey;
+    padding: 24px 24px 16px 24px;
+    & input {
+      font-size: 12px;
+      line-height: 15px;
+      color: $light-grey;
+      width: 100%;
+      height: 36px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    input::placeholder {
+      padding-left: 15px;
+    }
+
+    & input:focus {
+      outline: none;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &_description {
+    color: $special-grey;
+    padding: 0 24px 16px 24px;
+
+    & textarea {
+      color: $light-grey;
+      width: 100%;
+      height: 125px;
+      font-size: 12px;
+      line-height: 15px;
+      border: none;
+      border-radius: 5px;
+      resize: none;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+     textarea::placeholder {
+      padding-left: 15px;
+      padding-top: 15px;
+    }
+
+     textarea:focus {
+      outline: none;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &_link {
+    color: $special-grey;
+    padding: 0 24px 16px 24px;
+    & input {
+      color: $light-grey;
+      width: 100%;
+      height: 36px;
+      font-size: 12px;
+      line-height: 15px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    input::placeholder {
+      padding-left: 15px;
+    }
+
+    & input:focus {
+      outline: none;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &_price {
+    color: $special-grey;
+    padding: 0 24px 16px 24px;
+    & input {
+      color: $light-grey;
+      width: 100%;
+      height: 36px;
+      font-size: 12px;
+      line-height: 15px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    input::placeholder {
+      padding-left: 15px;
+    }
+
+    & input:focus {
+      outline: none;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  & button {
+    width: 284px;
+    height: 36px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: $basic-grey;
+    color: $special-grey;
+    align-self: center;
+  }
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>idaproject-test</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body">
+  <div class="body-wrapper">
+
+    <h1>Добавление товара</h1>
+
+    <form action="/" method="post" class="load">
+
+      <label class="load_name">Наименование товара
+        <input type="text" placeholder="Введите наименование товара">
+      </label>
+
+      <label class="load_description">Описание товара
+        <textarea placeholder="Введите описание товара"></textarea>
+      </label>
+
+      <label class="load_link">Ссылка на изображение товара
+        <input type="text" placeholder="Введите ссылку">
+      </label>
+
+      <label class="load_price">Цена товара
+        <input type="text" placeholder="Введите цену">
+      </label>
+
+      <button>Добавте товар</button>
+
+    </form>
+
+    <section class="product-cards">
+      <div class="dropdown">
+        <input type="checkbox" id="checkbox-toggle">
+        <label for="checkbox-toggle">По умолчанию</label>
+        <ul>
+          <li><a href="#">По убыванию</a></li>
+          <li><a href="#">По желанию</a></li>
+          <li><a href="#">По возрастанию</a></li>
+          <li><a href="#">По настроению</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+      ymaps.ready(init);
+
+      function init () {
+          var myMap = new ymaps.Map("map", {
+              // Центр карты, указываем коордианты
+              center:[59.938635, 30.323118],
+              // Масштаб, тут все просто
+              zoom: 9,
+              // Отключаем все элементы управления
+              controls: []
+          });
+
+          var myGeoObjects = [];
+
+          // Наша метка, указываем коордианты
+          myGeoObjects = new ymaps.Placemark([59.938635, 30.323118],{
+              balloonContentBody: 'CatEnergy',
+          },{
+              iconLayout: 'default#image',
+              // Путь до нашей картинки
+              iconImageHref: './img/map-icon.png',
+              // Размер по ширине и высоте
+              iconImageSize: [70, 70],
+              // Смещение левого верхнего угла иконки относительно
+              // её «ножки» (точки привязки).
+              iconImageOffset: [-35, -35]
+          });
+
+          var clusterer = new ymaps.Clusterer({
+              clusterDisableClickZoom: false,
+              clusterOpenBalloonOnClick: false,
+          });
+
+          clusterer.add(myGeoObjects);
+          myMap.geoObjects.add(clusterer);
+          myMap.behaviors.enabled('scrollZoom');
+
+      }
+  </script>
+</body>
+</html>

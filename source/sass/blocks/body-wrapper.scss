@@ -1,0 +1,15 @@
+.body-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: $basic-grey;
+  padding-top: 32px;
+
+  & h1 {
+    padding-left: 32px;
+    padding-bottom: 16px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
