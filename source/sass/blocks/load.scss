@@ -12,13 +12,48 @@
   flex-direction: column;
   flex-wrap: wrap;
 
+  &_name:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $orange;
+    border-radius: 50%;
+    transform: translateX(95px) translateY(50%);
+  }
+
+  &_link:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $orange;
+    border-radius: 50%;
+    transform: translateX(135px) translateY(50%);
+  }
+
+  &_price:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $orange;
+    border-radius: 50%;
+    transform: translateX(55px) translateY(50%);
+  }
+
   &_name {
-    color: $special-grey;
     padding: 24px 24px 16px 24px;
+
     & input {
-      font-size: 12px;
-      line-height: 15px;
-      color: $light-grey;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: $basic-black;
       width: 100%;
       height: 36px;
       border: none;
@@ -26,8 +61,11 @@
       box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
     }
 
-    input::placeholder {
-      padding-left: 15px;
+    & input::placeholder {
+        font-size: 12px;
+        line-height: 15px;
+        color: $light-grey;
+        padding-left: 15px;
     }
 
     & input:focus {
@@ -41,11 +79,13 @@
     padding: 0 24px 16px 24px;
 
     & textarea {
-      color: $light-grey;
+      color: $basic-black;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
       width: 100%;
       height: 125px;
-      font-size: 12px;
-      line-height: 15px;
       border: none;
       border-radius: 5px;
       resize: none;
@@ -53,8 +93,11 @@
     }
 
      textarea::placeholder {
-      padding-left: 15px;
-      padding-top: 15px;
+       padding-left: 15px;
+       padding-top: 15px;
+       color: $light-grey;
+       font-size: 12px;
+       line-height: 15px;
     }
 
      textarea:focus {
@@ -64,14 +107,16 @@
   }
 
   &_link {
-    color: $special-grey;
     padding: 0 24px 16px 24px;
+
     & input {
-      color: $light-grey;
+      color: $basic-black;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
       width: 100%;
       height: 36px;
-      font-size: 12px;
-      line-height: 15px;
       border: none;
       border-radius: 5px;
       box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -79,6 +124,9 @@
 
     input::placeholder {
       padding-left: 15px;
+      color: $light-grey;
+      font-size: 12px;
+      line-height: 15px;
     }
 
     & input:focus {
@@ -88,14 +136,16 @@
   }
 
   &_price {
-    color: $special-grey;
     padding: 0 24px 16px 24px;
+
     & input {
-      color: $light-grey;
+      color: $basic-black;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
       width: 100%;
       height: 36px;
-      font-size: 12px;
-      line-height: 15px;
       border: none;
       border-radius: 5px;
       box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -103,6 +153,9 @@
 
     input::placeholder {
       padding-left: 15px;
+      color: $light-grey;
+      font-size: 12px;
+      line-height: 15px;
     }
 
     & input:focus {
@@ -121,6 +174,11 @@
     background-color: $basic-grey;
     color: $special-grey;
     align-self: center;
+  }
+
+  & button:hover {
+    background-color: $basic-green;
+    color: $basic-white;
   }
 }
 
